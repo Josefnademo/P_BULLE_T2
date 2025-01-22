@@ -1,0 +1,15 @@
+@each((option, index) in options)
+ <input
+ type="radio"
+ id="{{ name }}{{ index }}"
+ name="{{ name }}"
+ value="{{ option.value }}"
+ {{ option.value === (value || old(name)) ? 'checked' : '' }}
+ />
+ <label for="{{ name }}{{ index }}">{{ option.label }}</label>
+@end
+@if(flashMessages.get('errors.' + name))
+ <p class="text-danger">
+ {{ flashMessages.get('errors.' + name)[0] }}
+ </p>
+@endif

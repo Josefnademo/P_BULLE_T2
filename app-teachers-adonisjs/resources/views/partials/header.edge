@@ -8,17 +8,17 @@
     <label for="user"></label>
     <input type="text" name="user" id="user" placeholder="Login" />
     <label for="password"></label>
-    <input type="password" name="password" id="password" placeholder="Mot de
-   passe" />
+    <input type="password" name="password" id="password" placeholder="Mot de passe" />
     <button type="submit" class="btn btn-login">
     Se connecter
     </button>
     </form>
     </div>
     </div>
-    <<nav>
+    <nav>
         <a href="{{ route('home') }}">Accueil</a>&nbsp;
         <a href="addTeacher.html">Ajouter un enseignant</a>
-       </nav>
+        <a href="{{ route('teacher.create') }}">Ajouter un enseignant</a>
+    </nav>
        
 </header>

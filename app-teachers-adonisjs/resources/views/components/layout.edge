@@ -10,10 +10,11 @@
  </title>
  </head>
  <body>
-    @include('partials/header')
-    <div class="container">
-    {{{ await $slots.main() }}}
-    </div>
-    @include('partials/footer')
-    </body>
-   </html>
+ @include('partials/header')
+ @include('partials/flash')
+ <div class="container">
+ {{{ await $slots.main() }}}
+ </div>
+ @include('partials/footer')
+ </body>
+</html>

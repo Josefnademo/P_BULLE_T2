@@ -1,0 +1,18 @@
+<label for="{{ name }}">{{ label }}</label>
+<select name="{{ name }}" id="{{ name }}" class="{{ cls || 'form-control'
+}}">
+ <option value="">
+ {{ placeholder || 'Sélectionnez une option' }}
+ </option>
+ @each(section in sections)
+ <option value="{{ section.id }}" {{ section.id == (value || old(name))
+? 'selected' : '' }}>
+ {{ section.name }}
+ </option>
+ @end
+</select>
+@if(flashMessages.get('errors.sectionId'))
+ <p class="text-danger">
+ {{ flashMessages.get('errors.sectionId') }}
+ </p>
+@endif

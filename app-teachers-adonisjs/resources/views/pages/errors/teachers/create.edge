@@ -1,0 +1,53 @@
+@component('components/layout', { title: title })
+ <h3>
+ {{ title }}
+ </h3>
+ <form action="{{ route('teacher.store') }}" method="post">
+ {{ csrfField() }}
+ <div class="radio">
+ @!component('components/radio', {
+ name: 'gender',
+ value: old('gender')) ,
+ options: [
+ { value: 'M', label: 'Homme' },
+ { value: 'W', label: 'Femme' },
+ { value: 'O', label: 'Autre' }
+ ]
+ })
+ </div>
+ <div class="field">
+ @!component('components/input', { name: 'firstname', label:
+'Prénom', value: old('firstname') })
+ </div>
+ <div class="field">
+ @!component('components/input', { name: 'lastname', label: 'Nom',
+value: old('lastname') })
+ </div>
+ <div class="field">
+ @!component('components/input', { name: 'nickname', label: 'Surnom',
+value: old('nickname') })
+ </div>
+ <div class="field">
+ @!component('components/textarea', { name: 'origine', label:
+'Origine', value: old('origine') })
+ </div>
+ <div class="field">
+ @!component('components/select', {
+ name: 'sectionId',
+ label: 'Section',
+ sections: sections,
+ value: old('section'),
+ placeholder: 'Choisissez une section'
+ })
+ </div>
+ <button type="submit">Enregistrer</button>
+ </form>
+@endcomponent
+@component('components/layout', { title: title })
+ <h3>
+ {{ title }}
+ </h3>
+ <form action="{{ route('teacher.store') }}" method="post">
+ @include('partials/createOrUpdateForm')
+ </form>
+@endcomponent

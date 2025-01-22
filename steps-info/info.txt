@@ -1,0 +1,22 @@
+npm run dev
+---Une vue est un fichier qui contient du HTML combiné avec des balises dynamiques pour insérer des données générées par le serveur.---
+---Un partial (ou fragment de vue) est un morceau de code HTML ou de template qui représente une petite partie d'une page. 
+Contrairement à un layout qui structure la page entière.Réutiliser des éléments comme des menus,des formulaires,des tableaux.
+Simplifier la structure des templates en décomposant les pages.---
+---Une migration est un mécanisme utilisé pour gérer les schémas de base de données dans le cadre d’un projet
+de développement. Elle permet de créer, modifier ou supprimer des tables et des colonnes dans une base de
+données de manière versionnée et contrôlée.---
+---Une Librairie est un ensemble de fonctions ou de classes préécrites que l'on peut utiliser pour éviter de réinventer la roue.---
+---Un Framework est un ensemble de composants, outils et bibliothèques préconfigurés qui fournit une structure de base pour le développement d'applications.---
+---Un Modèle est une représentation logique et structurée des données dans une application. Il sert
+d'intermédiaire entre la base de données et le reste de l'application, permettant de gérer les interactions avec
+les données---
+---Un contrôleur est un composant clé dans le cadre d’une architecture MVC (Model-View-Controller).---
+---les niveaux taxonomiques (CCAACC): 6. Créer 5. Critiquer 4. Analyser 3. Appliquer 2. Comprendre 1. Connaître ---
+---La méthode dd() (abréviation de dump and die) est une fonction de débogage intégrée dans AdonisJS.Elle permet d'afficher des informations utiles sur
+ des variables, des objets ou d'autres données, puis d'arrêterimmédiatement l'exécution du script.---
+---Un seeder est un script qui insère des données initiales ou fictives dans une base de données.utilise pour Peupler une base de données avec des données
+ de démarrage,Créer des données pour le développement---
+---Une factory est un outil utilisé dans le développement logiciel pour générer automatiquement des données fictives (dummy data) ou des données d'exemple.
+ Dans AdisonJs utilise pour:Créer des objets ou des modèles avec des données cohérentes et réalistes.Remplir la base de données avec des enregistrements 
+pour les tests ou le développement local.Automatiser la création d'entités comme des utilisateurs, des produits, des commandes, etc.---

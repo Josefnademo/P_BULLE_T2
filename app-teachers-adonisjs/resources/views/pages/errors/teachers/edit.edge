@@ -1,0 +1,55 @@
+@component('components/layout', { title: title })
+ <h3>
+ {{ title }}
+ </h3>
+ <form action="{{ route('teacher.update', {id: teacher.id}) }}"
+method="post">
+ {{ csrfField() }}
+ <div class="radio">
+ @!component('components/radio', {
+ name: 'gender',
+ value: old('gender') || (teacher ? teacher.gender : ''),
+ options: [
+ { value: 'M', label: 'Homme' },
+ { value: 'W', label: 'Femme' },
+ { value: 'O', label: 'Autre' }
+ ]
+ })
+ </div><div class="field">
+    @!component('components/input', { name: 'firstname', label:
+   'Prénom', value: old('firstname') || (teacher ? teacher.firstname : '') })
+    </div>
+    <div class="field">
+    @!component('components/input', { name: 'lastname', label: 'Nom',
+   value: old('lastname') || (teacher ? teacher.lastname : '') })
+    </div>
+    <div class="field">
+    @!component('components/input', { name: 'nickname', label: 'Surnom',
+   value: old('nickname') || ( teacher ? teacher.nickname : '') })
+    </div>
+    <div class="field">
+    @!component('components/textarea', { name: 'origine', label:
+   'Origine', value: old('origine') || ( teacher ? teacher.origine : '') })
+    </div>
+    <div class="field">
+    @!component('components/select', {
+    name: 'sectionId',
+    label: 'Section',
+    sections: sections,
+    value: old('section') || (teacher ? teacher.sectionId : ''),
+    placeholder: 'Choisissez une section'
+    })
+    </div>
+    <button type="submit">Enregistrer</button>
+    </form>
+   @endcomponent
+   
+   @component('components/layout', { title: title })
+   <h3>
+   {{ title }}
+   </h3>
+   <form action="{{ route('teacher.update', {id: teacher.id}) }}"
+  method="post">
+   @include('partials/createOrUpdateForm')
+   </form>
+  @endcomponent
